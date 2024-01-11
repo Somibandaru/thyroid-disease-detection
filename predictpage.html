@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Multi Step Form | CodingNepal</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dfgh2.css') }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+   </head>
+   <body>
+      <header>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         <h1 align="center" style=" font-size: 70px; background-color: #E5BACE;">Thyroid Tango</h1>
+         <h1 align="center" style=" font-size: 40px; background-color: #E5BACE;font-family: 'Comic Sans MS', cursive;">Let's Dance with Your Glands!</h1>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </header>
+      
+      <section>
+      <!-- <h1 class="info">start your test ryhtrhrt trhjtfrj rtfhyj</h1> -->
+      <div class="container">
+         <h1 align="center">Thyroid check.</h1>
+         <!-- <header>Signup Form</header> -->
+         <div class="form-outer">
+            <form action="/predict" method="POST">
+               <div class="page slide-page">
+                  <div class="field">
+                     <div class="label">
+                        Age:
+                     </div>
+                     <input  name="feature_{{ 1 }}"  type="number" max="100">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        sex:
+                     </div>
+                     <select name="feature_{{ 2 }}"  required>
+                        <option value=1>female</option>
+                        <option value=2>male</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <button class="firstNext next">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="field">
+                     <div class="label">
+                        is the patient on thyroxine:
+                     </div>
+                     <select name="feature_{{ 3 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        query on thyroxine:
+                     </div>
+                     <select name="feature_{{ 4 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        on anti thyroid meds:
+                     </div>
+                     <select name="feature_{{ 5 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field btns1" >
+                     <button class="prev-1 prev">Previous</button>
+                     <button class="next-1 next">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="field">
+                     <div class="label">
+                        sick:
+                     </div>
+                     <select name="feature_{{ 6 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        pregnant:
+                     </div>
+                     <select name="feature_{{ 7 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-2 prev">Previous</button>
+                     <button class="next-2 next">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="field">
+                     <div class="label">
+                        thyroid surgery:
+                     </div>
+                     <select name="feature_{{ 8 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        I131 treatment:
+                     </div>
+                     <select name="feature_{{ 9 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-3 prev">Previous</button>
+                     <button class="next-3 next">next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="field">
+                     <div class="label">
+                        query on hypothyroid:
+                     </div>
+                     <select  name="feature_{{ 10 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        query on hyperthyroid
+                     </div>
+                     <select  name="feature_{{ 11 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-4 prev">Previous</button>
+                     <button class="next-4 next">next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="field">
+                     <div class="label">
+                        lithium:
+                     </div>
+                     <select name="feature_{{ 12 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        goitre:
+                     </div>
+                     <select name="feature_{{ 13 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-5 prev">Previous</button>
+                     <button class="next-5 next">next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="field">
+                     <div class="label">
+                        tumor:
+                     </div>
+                     <select name="feature_{{ 14 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        hypopituitary:
+                     </div>
+                     <select name="feature_{{ 15 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        psych:
+                     </div>
+                     <select name="feature_{{ 16 }}"  required>
+                        <option value=0>false</option>
+                        <option value=1>true</option>  
+                    </select>
+                  </div>
+                  <div class="field btns6">
+                     <button class="prev-6 prev">Previous</button>
+                     <button class="next-6 next">next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="field">
+                     <div class="label">
+                        TSH:
+                     </div>
+                     <input name="feature_{{ 17 }}"  type="number" step="any">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        T3:
+                     </div>
+                     <input name="feature_{{ 18 }}"  type="number" step="any">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        TT4:
+                     </div>
+                     <input name="feature_{{ 19 }}"  type="number" step="any">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        T4U: 
+                     </div>
+                     <input name="feature_{{ 20 }}" type="number" step="any">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        FTI:
+                     </div>
+                     <input  name="feature_{{ 21 }}" type="number" step="any">
+                  </div>
+                  <div class="field btns7">
+                     <button class="prev-7 prev">Previous</button>
+                     <button class="submit">Submit</button>
+                  </div>
+               </div>
+               
+            </form>
+         </div>
+      </div>
+   </section>
+   <footer>
+      <div class="footer-container">
+          <!--**comoany-box**-->
+          <div class="footer-company-box">
+              <!--logo-->
+              <h1>ThyroLead</h1>
+              <!--details-->
+              <p>Free thyroid prediction using machine learning.</p>
+              <!--social-box-->
+              <!-- <div class="footer-social">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </div> -->
+          </div>
+          <!--**link-box***-->
+          <div class="footer-link-box">
+              <strong>Main Link's</strong>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Portfolio</a></li>
+              </ul>
+          </div>
+          <!--**link-box***-->
+          <div class="footer-link-box">
+              <strong>External Link's</strong>
+              <ul>
+                  <li><a href="#">Our Product's</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Disclaimer</a></li>
+                  <li><a href="#">Trem's and Condition's</a></li>
+              </ul>
+          </div>
+          <!--**link-box***-->
+          <div class="footer-link-box">
+              <strong>Developers</strong>
+              <ul>
+                  <li><a href="#">Somi</a></li>
+                  <li><a href="#">Mounika</a></li>
+                  <li><a href="#">Manaswini</a></li>
+                  <li><a href="#">Nandini</a></li>
+                  <li><a href="#">Akhila</a></li>
+                  <li><a href="#">Susanna</a></li>
+              </ul>
+          </div>
+          
+ 
+      </div>
+
+      <!--**bottom**********************-->
+      <div class="footer-bottom">
+          <span class="footer-owner">Made By Going-To Internet</span>
+          <span class="copyright">&#169; Copyright 2022 -  Going-To Internet</span>
+      </div>
+  </footer>
+      <script src="{{ url_for('static', filename='dfgh2.js') }}"></script>
+   </body>
+</html>
